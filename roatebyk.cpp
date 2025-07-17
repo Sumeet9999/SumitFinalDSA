@@ -10,12 +10,17 @@ int main() {
     int n = nums.size();
     k %= n; // handle k > n
 
-    // Step 1: Reverse entire array
-    reverse(nums.begin(), nums.end());
-    // Step 2: Reverse first k elements
-    reverse(nums.begin(), nums.begin() + k);
-    // Step 3: Reverse remaining n-k elements
-    reverse(nums.begin() + k, nums.end());
+    // // Step 1: Reverse entire array
+    // reverse(nums.begin(), nums.end());
+    // // Step 2: Reverse first k elements
+    // reverse(nums.begin(), nums.begin() + k);
+    // // Step 3: Reverse remaining n-k elements
+    // reverse(nums.begin() + k, nums.end());
+
+    reverse ( nums. begin(), nums.begin()+k );
+    reverse(nums.begin ()+k ,  nums.end());
+    reverse(nums.begin (),  nums.end());
+
 
     // Print rotated array
     for (int num : nums) {
@@ -24,3 +29,8 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
