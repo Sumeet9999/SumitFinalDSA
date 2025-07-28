@@ -22,14 +22,40 @@ int main (){
 
 
     // better using hashing
-    for (int i = 0 ; i<arr.size(); i ++ ){
-        mpp[arr[i]]++;
-    }
-    for (auto it : mpp ){
-        if (it.second>(arr.size()/2)){
-            cout<<it.first;
+    // for (int i = 0 ; i<arr.size(); i ++ ){
+    //     mpp[arr[i]]++;
+    // }
+    // for (auto it : mpp ){
+    //     if (it.second>(arr.size()/2)){
+    //         cout<<it.first;
+    //     }
+    // }
+
+
+    // optimal most voting algo 
+    int ele ; 
+    int count = 0 ; 
+    for ( int i = 0 ; i<arr.size() ; i++ ){
+        if ( count == 0 ){
+            count = 1 ; 
+            ele = arr[i];
+        }
+        else if (ele == arr[i]){
+            count ++;
+        }
+        else{
+            count --;
         }
     }
+   int  count1 = 0 ; 
+   for (int i = 0 ; i < arr.size(); i++){
+     if ( ele == arr[i]){
+        count1++ ;
+     } 
+   }
+
+   cout<<ele;
+    
 
 
 
