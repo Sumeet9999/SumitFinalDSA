@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 int main (){
@@ -17,9 +18,25 @@ int main (){
     //     }
     // }
 
-    // optimal 
+    // brute 
 
 
-    int postIndex = 0 , negatIndex = 1 ;
+
+
+    vector< int > pos ,neg;
+    for (int  i = 0 ; i<n ; i++){
+        if (arr[i] > 0)  pos.push_back(arr[i]); 
+        else neg.push_back(arr[i]);
+    }
+    vector<int> result(arr.size());
+    for (int i = 0; i < arr.size() / 2; i++) {
+        result[2 * i] = pos[i];
+        result[2 * i + 1] = neg[i];
+    }
+    for (int val : result) {
+        cout << val << " ";
+    }
+    cout << endl;
+
     // prinitng not done but logic is correct !
 }    
